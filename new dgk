@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website | Seasonal Collection & Journal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+  <style>
+    /* ===============================
+       Seasonal Color Variables
+       =============================== */
+    :root {
+      --rust: #BF533B;
+      --gold: #D79B3B;
+      --teal: #2D6869;
+      --rose: #A13D4E;
+      --cocoa: #7A5145;
+      --parch: #F1E9DA;
+      --ink: #1f1f1f;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdf9f6 0%, #f7eee8 100%);
+      color: var(--ink);
+      font-family: "Montserrat", system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===============================
+       Navigation
+       =============================== */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 600;
+    }
+    nav ul li strong {
+      color: var(--rust);
+      font-size: 1.2rem;
+    }
+
+    /* ===============================
+       Hero Section
+       =============================== */
+    header.hero {
+      position: relative;
+      text-align: center;
+      padding: 6rem 1rem;
+      background: linear-gradient(120deg, var(--parch) 0%, #fdf9f6 100%);
+    }
+    header.hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--rust);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    header.hero p.sub {
+      color: var(--teal);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1rem;
+    }
+    header.hero a.button {
+      background: var(--rust);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .owl-watermark {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      opacity: 0.1;
+      width: 100px;
+      height: auto;
+    }
+
+    /* ===============================
+       Glowmail Form
+       =============================== */
+    section.glowmail {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+    section.glowmail h2 {
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+    section.glowmail form input, 
+    section.glowmail form button {
+      width: 100%;
+      margin-top: 0.75rem;
+    }
+    section.glowmail form button {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* ===============================
+       Product / Blog Grid
+       =============================== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #faf7f2;
+    }
+    .card .txt {
+      padding: 1rem;
+    }
+    .card h3 {
+      margin: 0.25rem 0;
+      color: var(--rust);
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .card a.btn {
+      background: var(--teal);
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ===============================
+       Footer
+       =============================== */
+    footer {
+      background: var(--cocoa);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .social {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .social svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+      transition: fill 0.3s;
+    }
+    .social svg:hover {
+      fill: var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>BrandName</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <header class="hero">
+    <img src="https://img1.wsimg.com/isteam/ip/94280168-1af7-4be5-a637-9ba977156692/owls.png" 
+         alt="Owl watermark" class="owl-watermark">
+    <h1>Seasonal Glow: Simple rituals for cozy days.</h1>
+    <p class="sub">A calm rhythm of creativity, faith, and reflection.</p>
+    <a href="#" class="button">Shop the Collection</a>
+  </header>
+
+  <!-- ===================== GLOWMAIL SIGNUP ===================== -->
+  <section class="glowmail">
+    <h2>Join Glowmail</h2>
+    <p>Weekly gentle reminders to stay creative and grounded.</p>
+    <form onsubmit="event.preventDefault()">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <small>No spam. Unsubscribe anytime.</small>
+  </section>
+
+  <!-- ===================== PRODUCTS GRID ===================== -->
+  <main>
+    <section class="grid">
+      <article class="card">
+        <img src="https://placehold.co/600x400" alt="Product placeholder" />
+        <div class="txt">
+          <h3>Product Title</h3>
+          <p>Short description of this featured product.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://placehold.co/600x400" alt="Product placeholder" />
+        <div class="txt">
+          <h3>Product Title</h3>
+          <p>Short description of this featured product.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://placehold.co/600x400" alt="Product placeholder" />
+        <div class="txt">
+          <h3>Product Title</h3>
+          <p>Short description of this featured product.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===================== BLOG HIGHLIGHTS ===================== -->
+  <section class="grid">
+    <article class="card">
+      <img src="https://placehold.co/600x400" alt="Blog image" />
+      <div class="txt">
+        <h3>Blog Post Title</h3>
+        <p>A brief intro to the article topic.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://placehold.co/600x400" alt="Blog image" />
+      <div class="txt">
+        <h3>Blog Post Title</h3>
+        <p>A brief intro to the article topic.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>&copy; 2025 BrandName. All rights reserved.</p>
+    <div class="social">
+      <!-- Pinterest SVG -->
+      <a href="#" aria-label="Pinterest">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 4.99 3.06 9.23 7.4 11.03-.1-.94-.2-2.39.04-3.43.22-.94 1.44-5.98 1.44-5.98s-.37-.74-.37-1.84c0-1.72 1-3.01 2.26-3.01 1.07 0 1.59.8 1.59 1.76 0 1.07-.68 2.66-1.03 4.14-.29 1.21.62 2.2 1.83 2.2 2.2 0 3.9-2.32 3.9-5.67 0-2.97-2.14-5.04-5.2-5.04-3.55 0-5.64 2.66-5.64 5.4 0 1.07.42 2.21.95 2.83.1.12.12.22.09.33-.09.36-.29 1.14-.33 1.3-.05.21-.17.26-.4.16-1.49-.69-2.43-2.85-2.43-4.6 0-3.74 2.72-7.18 7.84-7.18 4.12 0 7.33 2.94 7.33 6.86 0 4.09-2.58 7.39-6.17 7.39-1.21 0-2.35-.63-2.74-1.36l-.75 2.87c-.27 1.05-1 2.36-1.49 3.16 1.12.34 2.3.53 3.53.53 6.63 0 12-5.37 12-12S18.63 0 12 0z"/>
+        </svg>
+      </a>
+      <!-- Instagram SVG -->
+      <a href="#" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 1.5A4.26 4.26 0 0 0 3.5 7.75v8.5A4.26 4.26 0 0 0 7.75 20.5h8.5A4.26 4.26 0 0 0 20.5 16.25v-8.5A4.26 4.26 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 12 15a3.5 3.5 0 0 0 0-6.5zm5.75-.88a1.12 1.12 0 1 1-2.24 0 1.12 1.12 0 0 1 2.24 0z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
