@@ -1,36 +1,26 @@
-index.html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DivaGlamKreation Featured</title>
-  <link rel="stylesheet" href="./dgk.css">
-</head>
-<body>
-  <main class="wrap">
-    <h1 class="h1">Cozy Faith Stickers & Journaling Essentials</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DivaGlamKreation Featured</title>
+    <link rel="stylesheet" href="dgk.css" />
+  </head>
 
-    <section class="hero" aria-labelledby="h-title">
-      <p class="eyebrow">Glow & Grace</p>
-      <h2 id="h-title" class="h1">Shop Featured</h2>
-      <p class="sub">Small, uplifting reminders for your mugs, journals, and everyday moments.</p>
-      <a class="cta" href="#shop">Shop now</a>
-      <a class="cta secondary" href="https://lemd30.wordpress.com" target="_blank" rel="noopener">Read the journal</a>
-    </section>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>Cozy Faith Stickers & Journaling Essentials</h1>
+        <p>Glow & Grace</p>
+      </section>
 
-    <section id="shop">
-      <h2 class="section-title">Featured products</h2>
-      <p class="section-sub">Hand-picked items with free shipping.</p>
-      <div id="grid" class="shop-grid" aria-live="polite"></div>
-    </section>
+      <section class="shop-grid" id="product-grid"></section>
 
-    <footer class="footer">
-      <p>&copy; <span id="yr">2024</span> DivaglamKreation</p>
-    </footer>
-  </main>
+      <footer>
+        <p>© 2024 DivaGlamKreation</p>
+      </footer>
+    </main>
 
-  <script>window.DGK_CONFIG_URL = './dgk-config.json';</script>
-  <script src="./dgk.js" defer></script>
-</body>
+    <script src="dgk.js"></script>
+  </body>
 </html>
